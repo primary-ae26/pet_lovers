@@ -6,3 +6,8 @@ sources:
     schema: BOX
     tables:
       - name: requests
+  - name: google_analytics
+    database: LOAD
+    schema: GOOGLE_ANALYTICS
+    tables:
+      - name: demographic_city_report
