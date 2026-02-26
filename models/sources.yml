@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: box
+    database: LOAD
+    schema: BOX
+    tables:
+      - name: requests
