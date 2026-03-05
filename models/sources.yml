@@ -6,3 +6,5 @@ sources:
     schema: BOX
     tables:
       - name: requests
+      - name: cancellations
+      - name: walks
