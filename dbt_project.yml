@@ -38,14 +38,14 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   pet_lovers_analytics:
     base:
-      materialized: view
+      +materialized: view
       +schema: BASE
     intermediate:
-      materialized: view
+      +materialized: view
       +schema: INTERMEDIATE
     analytics:
-      materialized: table
+      +materialized: table
       +schema: ANALYTICS
     core:
-      materialized: table
+      +materialized: table
       +schema: CORE
