@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_client
+    description: The client dimenion table. This includes all clients that ever placed a request
+    columns:
+      - name: client_id
+        description: The unique id assigned to each client
+        tests:
+          - unique
+          - not_null
+      - name: clienat_address
+        description: The encrypted address of a client
+      - name: client_city
+        description: The city where a client live
+      - name: phone
+        description: The encrypted phone number of a client
+      - name: name
+        description: The encrypted name of a client
