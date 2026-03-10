@@ -12,8 +12,34 @@ models:
       - name: client_address
         description: The encrypted address of a client
       - name: client_city
-        description: The city where a client live
+        description: The city where a client lives
       - name: phone
         description: The encrypted phone number of a client
       - name: client_name
         description: The encrypted name of a client
+  - name: dim_pet
+    description: The pet dimension table. One row for every pet.
+    columns:
+      - name: pet_id
+        description: This is the unique id of a pet.
+      - name: client_id
+        description: This is the id of the owner of a pet. It's a foreign key that can be used with dim_client 
+      - name: pet_name
+        description: This is the name of the pet.
+  - name: fact_walk
+    description: Fact table for all walks. past walks, future walks, canceled walks.
+    columns:
+      - name: request_at
+        description: timestamp of when the client placed a request
+      - name: client_id
+        description: This is the id of the client requesting the walk
+      - name: pet_id
+        description: This is the id of the pet
+      - name: request_day_from
+        description: timestamp of starting time of the walk
+      - name: duration_min
+        description: duration of the walk in minutes
+      - name: cancel_at_at
+        description: Timestamp for when a request was canceled. If missing, it's not canceled.
+      - name: walker_id
+        description: id of the walker who perfromed the walk. If missing, the walk hasn't happened (yet)
