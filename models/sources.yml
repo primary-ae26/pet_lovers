@@ -12,3 +12,8 @@ sources:
         loaded_at_field: _fivetran_synced
       - name: cancellations
       - name: walks
+  - name: google_drive
+    database: LOAD
+    schema: GOOGLE_DRIVE
+    tables:
+      - name: walkers
