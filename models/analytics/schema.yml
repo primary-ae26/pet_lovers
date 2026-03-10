@@ -22,6 +22,9 @@ models:
     columns:
       - name: pet_id
         description: This is the unique id of a pet.
+        tests:
+          - unique
+          - not_null
       - name: client_id
         description: This is the id of the owner of a pet. It's a foreign key that can be used with dim_client 
       - name: pet_name
