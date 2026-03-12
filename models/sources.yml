@@ -18,6 +18,7 @@ sources:
     schema: GOOGLE_DRIVE
     tables:
       - name: walkers
+      - name: expenses
   - name: google_analytics
     database: LOAD
     schema: GOOGLE_ANALYTICS
