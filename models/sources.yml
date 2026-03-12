@@ -6,8 +6,21 @@ sources:
     schema: BOX
     tables:
       - name: requests
+        config:
+          freshness:
+            warn_after: {count: 1, period: day}
+            error_after: {count: 5, period: day}
+          loaded_at_field: _fivetran_synced
+      - name: cancellations
+      - name: walks
+  - name: google_drive
+    database: LOAD
+    schema: GOOGLE_DRIVE
+    tables:
+      - name: walkers
   - name: google_analytics
     database: LOAD
     schema: GOOGLE_ANALYTICS
     tables:
       - name: demographic_city_report
+
