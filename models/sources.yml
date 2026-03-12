@@ -18,3 +18,9 @@ sources:
     schema: GOOGLE_DRIVE
     tables:
       - name: walkers
+  - name: google_analytics
+    database: LOAD
+    schema: GOOGLE_ANALYTICS
+    tables:
+      - name: demographic_city_report
+
